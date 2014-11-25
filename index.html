@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>#forGrace</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+		<script>
+						<!----- JQUERY FOR SLIDING NAVIGATION --->
+			$(document).ready(function() {
+			  $('a[href*=#]').each(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+			    && location.hostname == this.hostname
+			    && this.hash.replace(/#/,'') ) {
+			      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+			      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+			       if ($target) {
+			         var targetOffset = $target.offset().top;
+
+			<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->
+			         $(this).click(function() {
+			$("#nav li a").removeClass("active");
+			$(this).addClass('active');
+			           $('html, body').animate({scrollTop: targetOffset}, 1000);
+			           return false;
+			         });
+			      }
+			    }
+			  });
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<header id="header">
+			<div class="content">
+				<div id="logo">
+					<a href="#slide1"> #forGrace </a>
+				</div>
+
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="#slide1" class="active" title="Home" >Home</a>
+						</li>
+						<li>
+							<a href="#slide3" title="About">About</a>
+						</li>
+						<li>
+							<a href="#slide4" title="Link">Links</a>
+						</li>
+						<li>
+							<a  href="#slide5" title="Contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="slide1">
+			<div class="content">
+				<!-- ENTER BLOG STUFF HERE -->
+			</div>
+		</div>
+
+		<div id="slide2">
+			<div class="content" >
+				<div class="container">
+					<h3 class="text">“But the fruit of the Spirit is love, joy, peace, patience,  kindness, goodness, faithfulness, gentleness,  self-control;  against such things there is no law”
+					</h3>
+					<h4 class="author_name_gray">Galatians 5:22-23 </h4>
+				</div>
+			</div>
+		</div>
+
+		<div id="slide3">
+			<div class="content">
+				<div class="about">
+					<h2 class="heading">About</h2>
+				</div>
+				<div class="container">
+					<h3 class="text"></h3>
+				</div>
+			</div>
+		</div>
+
+		<div id="slide4">
+			<div class="content">
+				<div class="about">
+					<h2 style="color:black;">Links (You can add something here)</h2>
+				</div>				
+				<div class="team-member">
+					<div class="team_thumb ">
+						<img src="img/Andy.png" />
+					</div>
+					<div class="desc">
+						<h3>Andy</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="slide5">
+			<div class="content">
+				<div class="about">
+					<h2>Contact</h2>
+				</div>
+				<div class="container">
+					<ul id="social_links">
+						<li><img src="img/email-icon.png" align="left"/><h4 class="author_name_white">andymontes18@gmail.com </h4></li>
+						<li><a href="" target="_blank"><img src="img/facebook.png" align="left"/></a><h4 class="author_name_white">Facebook</h4></li>
+						<li><a href="" target="_blank"><img src="img/twitter.png" align="left"/></a><h4 class="author_name_white">Twitter</h4></li>
+					</ul>
+				</div>
+				<div id="copyright">
+					© AMPED. All Rights Reserved
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
